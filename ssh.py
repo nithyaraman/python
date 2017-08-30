@@ -8,8 +8,8 @@ def paramiko_config() :
         ssh = paramiko.SSHClient()
         ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 
-        ssh.connect("192.168.100.233", port = 22,username ="vchn170",
-                    password ="vvdnchn", timeout =10.0,pkey = None)
+        ssh.connect("192.168.100.233", port = 22,username ="v170",
+                    password ="pwd", timeout =10.0,pkey = None)
         print "connected"
         connection = ssh.invoke_shell()
         connection.send("ls" +"\n"+ "ls"+"\n")
